@@ -4,23 +4,27 @@ var limites = document.getElementById("limites");
 var viborita = document.getElementById("viborita");
 
 document.addEventListener("keydown", movimiento);
-
+var posicionX = 200;
+var posicionY = 200;
 // Movimiento sólo con teclado
 function movimiento(event){
   var flecha = event.keyCode;
-  console.log(flecha);
   switch (flecha) {
     case 37: // Mover izquierda
-      console.log("izq");
+      posicionX -= 100;
+      viborita.style.marginLeft = posicionX + "px";
       break;
     case 38: // Mover arriba
-      console.log("arriba");
+      posicionY -= 100;
+      viborita.style.marginTop = posicionY + "px";
       break;
     case 39: // Mover derecha
-      console.log("der");
+      posicionX += 100;
+      viborita.style.marginLeft = posicionX + "px";
       break;
     case 40: // Mover abajo
-      console.log("abajo");
+      posicionY += 100;
+      viborita.style.marginTop = posicionY + "px";
       break;
     default:
 
